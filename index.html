@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Valjr.art</title>
+    <!-- Meta -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui"/>
+    <link rel="icon" href="build/images/icons/icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <!-- CSS -->
+
+    <link href="build/1.1/css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="build/bootstrap/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+        }
+
+        .lightbox-open {
+            overflow: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row > .column {
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        img {
+            margin-bottom: -4px;
+        }
+
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        img.hover-shadow {
+            transition: 0.3s
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        }
+    </style>
+</head>
+<body classc">
+
+<!-- Page -->
+<div class="page" id="root">
+
+    <!-- Loading -->
+    <div class="loading">
+        <i class="loading__icon"></i>
+    </div>
+    <!--/Loading -->
+
+
+    <!--/Logo -->
+
+
+    <!-- Intro -->
+    <article class="intro" data-name="intro">
+        <div class="intro__home">
+            <div class="intro__decor" data-parallaxify-range-x="-35">
+                <i class="intro__decor__inner"></i>
+            </div>
+            <div class="intro__arrow">
+                <i class="intro__arrow__inner"></i>
+            </div>
+            <div data-person="character" class="intro__person intro__person_character intro__person_1" data-ratio="0.80645161">
+                <div class="intro__person__content">
+                    <div class="intro__person__content__inner">
+                        <img class="intro__person__frame intro__person__frame_1" src="build/images/intro/character/1.png"/>
+                        <img class="intro__person__frame intro__person__frame_2" src="build/images/intro/character/2.png"/>
+                        <img class="intro__person__frame intro__person__frame_3" src="build/images/intro/character/3.png"/>
+                        <img class="intro__person__frame intro__person__frame_4" src="build/images/intro/character/4.png"/>
+                        <i class="intro__person__area"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="intro__about" data-name="intro-about">
+            <div class="intro__about__content">
+                <div class="intro__about__content__text"><p style="color:#DC143C;">Val Junior</p>
+                    <nobr>+55 11 986529905</nobr>
+                    Illustrator
+                </div>
+            </div>
+        </div>
+        <div class="intro__doing">
+            <div class="intro__doing__title" style="color:red;">Skills</div>
+            <div class="intro__doing__item">comic artist</div>
+            <div class="intro__doing__item">cartoonist</div>
+            <div class="intro__doing__item">animator</div>
+            <div class="intro__doing__item">illustrator</div>
+            <div class="intro__doing__item">Manga Studio</div>
+            <div class="intro__doing__item">Photoshop</div>
+            <br/>
+
+        </div>
+
+    </article>
+
+    <!-- Events -->
+    <article data-name="events" class="events clients" data-bg-colors-item>
+
+        <div class="page__screen" data-title-screen>
+            <div class="page__title" data-title-screen-title style="font-size:70px;color:#C0C0C0;">Additional
+                Information
+            </div>
+            <div class="page__title__line" data-title-screen-line></div>
+            <div class="page__text" data-title-screen-text style="color:white;">My work consists in drawing and painting
+                comics, with help of design tools, like Photoshop, inDesign, Illustrator and Manga Studio.
+            </div>
+        </div>
+        <div class="page__inner">
+
+
+            <div class="clients__cases page__inner" data-clients-cases>
+                <div class="clients__cases__item clients__cases__item_karim" data-clients-cases-item="karim">
+                    <img src="build/images/upload/karim.png" alt="" class="clients__cases__item__img"
+                         data-clients-cases-item-image>
+                    <div class="clients__cases__item__body" data-clients-cases-item-body>
+                        <div data-clients-cases-item-body-block class="clients__cases__item__title"
+                             style="color:#F0E68C;">Art Gallery
+                        </div>
+                        <div data-clients-cases-item-body-block class="clients__cases__item__text" style="color:white;">
+                            Here you can see a little about my work
+                        </div>
+                        <button type="button" class="clients__cases__item__link" onclick="openModal();">Click Here
+                        </button>
+
+
+                        <div id="myModal" class="modal">
+                            <span class="close cursor" onclick="closeModal()">&times;</span>
+                            <div class="modal-content">
+
+                                <div class="mySlides">
+                                    <div class="numbertext">1 / 9</div>
+                                    <img src="build/images/upload/gallery/1.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">2 / 9</div>
+                                    <img src="build/images/upload/gallery/2.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">3 / 9</div>
+                                    <img src="build/images/upload/gallery/3.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">4 / 9</div>
+                                    <img src="build/images/upload/gallery/4.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">5 / 9</div>
+                                    <img src="build/images/upload/gallery/5.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">6 / 9</div>
+                                    <img src="build/images/upload/gallery/6.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">7 / 9</div>
+                                    <img src="build/images/upload/gallery/7.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">8 / 9</div>
+                                    <img src="build/images/upload/gallery/8.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">9 / 9</div>
+                                    <img src="build/images/upload/gallery/9.jpg" style="width:100%">
+                                </div>
+
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                                <div class="caption-container">
+                                    <p id="caption"></p>
+                                </div>
+
+
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/1.jpg" style="width:100%"
+                                         onclick="currentSlide(1)" alt="Woman Color">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/2.jpg" style="width:100%"
+                                         onclick="currentSlide(2)" alt="Woman">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/3.jpg" style="width:100%"
+                                         onclick="currentSlide(3)" alt="Tongue">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/4.jpg" style="width:100%"
+                                         onclick="currentSlide(4)" alt="Sexy Woman">
+                                </div>
+
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/5.jpg" style="width:100%"
+                                         onclick="currentSlide(5)" alt="Breasts">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/6.jpg" style="width:100%"
+                                         onclick="currentSlide(6)" alt="Cry">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/7.jpg" style="width:100%"
+                                         onclick="currentSlide(7)" alt="???">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/8.jpg" style="width:100%"
+                                         onclick="currentSlide(8)" alt="Family">
+                                </div>
+
+                                <div class="column">
+                                    <img class="demo cursor" src="build/images/upload/gallery/9.jpg" style="width:100%"
+                                         onclick="currentSlide(9)" alt="Teen">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clients__cases__item clients__cases__item_urban-walks"
+                     data-clients-cases-item="urban-walks">
+                    <img src="build/images/upload/urban-walks.png" alt="" class="clients__cases__item__img"
+                         data-clients-cases-item-image>
+                    <div class="clients__cases__item__body" data-clients-cases-item-body>
+                        <div data-clients-cases-item-body-block class="clients__cases__item__title"
+                             style="color:#DC143C;">About this...
+                        </div>
+                        <div data-clients-cases-item-body-block class="clients__cases__item__text" style="color:white;">
+                            This website was created to show my work and make a communication channel between you and
+                            me.
+                            Please send me a message with suggestions, questions, criticals or to buy my work.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="page__screen" data-title-screen>
+            <div class="page__title" data-title-screen-title style="font-size:70px;color:#C0C0C0;">Contact
+            </div>
+            <div class="page__title__line" data-title-screen-line></div>
+        </div>
+        <br/>
+
+        <div class="pgContato">
+            <div class="contato">
+                <div class="formContato">
+                    <form id="formContato" tabindex="1" action="contact.html" method="post">
+                        <center>
+                            <input id="nome" name="nome" required="" type="text" placeholder="Name"/>
+                            <input id="email" name="email" required="" type="email" placeholder="Email"/>
+                            <input id="tel" name="tel" type="tel" placeholder="Phone number"/>
+                            <textarea id="conteudo" name="conteudo" required=""
+                                      placeholder="Message..."></textarea>
+                            <button class="botaoContato" type="submit">Send</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <center>
+
+
+            <div class="intro__arrow2">
+                <a href="#top"><img src="build/1.1/css/ui/arrow-bottomUP.svg"></a>
+
+            </div>
+
+        </center>
+    </article>
+    <!--/Events -->
+
+
+    <!-- Footer -->
+    <footer class="footer" data-name="footer">
+
+        <div class="footer__studio">
+            <div data-footer-item>
+				<span class="footer__studio__text">Development by 
+				<a class="footer__studio__link" href="#" target="_blank">Richard Henrique</a>
+				</span>
+            </div>
+        </div>
+</div>
+</footer>
+<!--/Footer -->
+
+<!-- modal -->
+<script>
+    function openModal() {
+        document.getElementById('myModal').style.display = "block";
+        $('.overlay').show();
+        $('body').addClass('lightbox-open');
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+        $('.overlay').hide();
+        $('body').removeClass('lightbox-open');
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>
+
+<!-- end modal -->
+
+
+<!-- JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="build/1.1/js/script.js"></script>
+<script src="build/1.1/js/main.js" charset="UTF-8"></script>
+<script src="build/1.1/js/modernizr.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
