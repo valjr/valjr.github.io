@@ -422,63 +422,11 @@
 </footer>
 <!--/Footer -->
 
-<!-- modal -->
-<script>
-    function openModal() {
-        document.getElementById('myModal').style.display = "block";
-        $('.overlay').show();
-        $('body').addClass('lightbox-open');
-    }
-
-    function closeModal() {
-        document.getElementById('myModal').style.display = "none";
-        $('.overlay').hide();
-        $('body').removeClass('lightbox-open');
-    }
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        var captionText = document.getElementById("caption");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
-    }
-</script>
-
-<!-- end modal -->
 
 
 <!-- JS -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="build/1.1/js/script.js"></script>
-<script src="build/1.1/js/main.js" charset="UTF-8"></script>
-<script src="build/1.1/js/modernizr.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 </html>
